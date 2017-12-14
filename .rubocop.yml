@@ -1,0 +1,81 @@
+#################### Layout #############################
+Layout/IndentationWidth:
+  Width: 2
+
+#################### Lint ###############################
+
+Lint/DeprecatedClassMethods:
+  Enabled: false
+
+#################### Metrics ###############################
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockNesting:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+  AllowURI: true
+  URISchemes:
+    - https
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+#################### Style ###########################
+
+Style/BracesAroundHashParameters:
+  Enabled: false
+
+Style/CommentAnnotation:
+  Enabled: false
+
+Style/Encoding:
+  Enabled: false
+
+Style/FileName:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/LineEndConcatenation:
+  Enabled: false
+
+Style/Next:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/NumericLiteralPrefix:
+  EnforcedOctalStyle: zero_only
+
+Style/PerlBackrefs:
+  Enabled: false
+
+Style/RedundantReturn:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/WordArray:
+  Enabled: false

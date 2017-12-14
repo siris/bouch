@@ -1,0 +1,31 @@
+---
+Budget:
+  Q1:
+    Rent:
+      cost: 1000
+      repeat: true
+    foo: 20
+    bar: 5
+  Q2:
+    Rent:
+      cost: 1000
+      repeat: true
+    foo: 20
+    bar: 5
+  Q3:
+    Rent:
+      cost: 1000
+      repeat: true
+    foo: 20
+    bar: 5
+  Q4:
+    Rent:
+      cost: 1000
+      repeat: true
+    foo: 20
+    bar: 5
+Salary:
+  #quantity: 1108.00
+  quantity: 1108
+  frequency: 2
+...
