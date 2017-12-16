@@ -10,21 +10,24 @@ Budget:
     Rent:
       cost: 1000
       repeat: true
-    foo: 20
-    bar: 5
+    fizz: 20
+    buzz: 5
   Q3:
     Rent:
       cost: 1000
       repeat: true
-    foo: 20
-    bar: 5
+    bubble: 20
+    sort: 5
   Q4:
     Rent:
       cost: 1000
       repeat: true
-    foo: 20
-    bar: 5
+    baz: 20
+    qax: 5
 Salary:
   quantity: 1108.00
   frequency: 2
+Assets:
+  foo: 500
+  bar: 500
 ...

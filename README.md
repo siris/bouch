@@ -1,5 +1,7 @@
 # bouch
-The budget pouch. A simple tool to calculate and project your annual personal budget, financial plan, and goals.
+The budget pouch. A simple tool to calculate and project your annual personal budget based on fiscal quarters expenditures, income, and total assets.
+
+Use it to help establish an annual financial plan and set monetary goals.
 
 ## Usage
 
@@ -17,14 +19,16 @@ You should see the example budget summary output:
 
 ```
 ---------------
-Quarter1:              3025.00
-Quarter2:              3025.00
-Quarter3:              3025.00
-Quarter4:              3025.00
+Quarter1:                      3025.00
+Quarter2:                      3025.00
+Quarter3:                      3025.00
+Quarter4:                      3025.00
 ---------------
-Annual Total:          12100.00
-Annual Salary:         28808.00
-Budget Percent:        42.00%
+Annual Total:                  12100.00
+Annual Salary:                 28808.00
+Budget Percent:                42%
+---------------
+Assets Total:                  1000.00
 ```
 
 ### Pouch Schema
@@ -62,6 +66,10 @@ Budget pouch files are written in Ruby friendly YAML and currently use the follo
   * **frequency**
       * Value: Integer
       * Equals number of weeks for each salary pay period
+* Assets nested keys and values:
+  * foo
+      * Value: Integer or Float
+      * Equals an asset's total valued amount
 
 Here is an simple example of of budget pouch file:
 
@@ -95,6 +103,9 @@ Budget:
 Salary:
   quantity: 1108.00
   frequency: 2
+Assets:
+  foo: 500
+  bar: 500
 ...
 
 ```
