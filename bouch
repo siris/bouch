@@ -2,11 +2,22 @@
 
 require_relative 'lib/bouch'
 
-if ARGV[0].eql?(nil)
-  puts 'Please supply budget pouch YAML file path and rerun bouch.'
-  puts "Usage: #{$PROGRAM_NAME} [YAML_FILE]"
-  exit 1
-else
+def create_budget
   budget = Bouch.new(ARGV[0])
   budget.show_budget
 end
+
+def main
+  if ARGV[0].eql?(nil)
+    puts 'Please supply budget pouch YAML file path and rerun bouch.'
+    puts "Usage: #{$PROGRAM_NAME} [YAML_FILE]"
+    exit 1
+  elsif File.exists?(ARGV[0])
+    create_budget
+  else
+    puts "Whoops. The budget pouch file specified: #{ARGV[0]} ; does not exist!"
+    exit 1
+  end
+end
+
+main
