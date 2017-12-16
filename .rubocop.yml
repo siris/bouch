@@ -44,6 +44,9 @@ Style/BracesAroundHashParameters:
 Style/CommentAnnotation:
   Enabled: false
 
+Style/EmptyLiteral:
+  Enabled: false
+
 Style/Encoding:
   Enabled: false
 

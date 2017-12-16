@@ -25,7 +25,6 @@ Budget:
     foo: 20
     bar: 5
 Salary:
-  #quantity: 1108.00
-  quantity: 1108
+  quantity: 1108.00
   frequency: 2
 ...
