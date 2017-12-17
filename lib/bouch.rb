@@ -28,7 +28,7 @@ class Bouch
   def show_debt_ratio
     calc_assets(@pouch['Assets']) if @assets.empty?
     calc_debts(@pouch['Debts']) if @debts.empty?
-    puts format('%-30s %.2f', 'Debt Ratio:', calc_debt_ratio(@debts.sum, @assets.sum))
+    puts format('%-30s %.4f', 'Debt Ratio:', calc_debt_ratio(@debts.sum, @assets.sum))
   end
 
   # Summarize and show all financial quarter budgets
@@ -101,7 +101,7 @@ class Bouch
 
   # Calculate a debt ratio: total debts divided by total assets
   def calc_debt_ratio(debts, assets)
-    (debts.to_f / assets.to_f).round(2)
+    (debts.to_f / assets.to_f).round(4)
   end
 
   # Calculate a quarterly repeating budget item amount
