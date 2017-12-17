@@ -41,7 +41,9 @@ Budget pouch files are written in Ruby friendly YAML and currently use the follo
 * Primary hash keys:
   * **Budget**
   * **Salary**
-* Budget nested keys and values:
+  * **Assets**
+  * **Debts**
+* **Budget** nested keys and values:
     * **Q1**
         * foo
             * Value: Integer or Float
@@ -59,18 +61,18 @@ Budget pouch files are written in Ruby friendly YAML and currently use the follo
       * Same nested schema as Q1
   * **Q4**
       * Same nested schema as Q1
-* Salary nested keys and values:
+* **Salary** nested keys and values:
   * **quantity**
       * Value: Float or Integer
       * Equals amount of after-tax money per salary pay period
   * **frequency**
       * Value: Integer
       * Equals number of weeks for each salary pay period
-* Assets nested keys and values:
+* **Assets** nested keys and values:
   * foo
       * Value: Integer or Float
       * Equals an asset's total valued amount
-* Debts nested keys and values:
+* **Debts** nested keys and values:
   * bar
       * Value: Integer or Float
       * Equals a debt's total valued amount
