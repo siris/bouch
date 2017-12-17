@@ -5,15 +5,30 @@ require 'yaml'
 class Bouch
   def initialize(file)
     @assets = Array.new
+    @debts = Array.new
     @pouch = YAML.safe_load(IO.read(file))
     @quarters = Hash.new
   end
 
   # Summarize and show aggregate asset totals
-  def show_assets_total(assets)
-    calc_assets(assets)
+  def show_assets_total
+    calc_assets(@pouch['Assets']) if @assets.empty?
     puts '---------------'
     puts format('%-30s %.2f', 'Assets Total:', @assets.sum)
+  end
+
+  # Summarize and show aggregate liabilities totals
+  def show_debts_total
+    calc_debts(@pouch['Debts']) if @debts.empty?
+    puts '---------------'
+    puts format('%-30s %.2f', 'Debt Total:', @debts.sum)
+  end
+
+  # Summarize and show debt ratio
+  def show_debt_ratio
+    calc_assets(@pouch['Assets']) if @assets.empty?
+    calc_debts(@pouch['Debts']) if @debts.empty?
+    puts format('%-30s %.2f', 'Debt Ratio:', calc_debt_ratio(@debts.sum, @assets.sum))
   end
 
   # Summarize and show all financial quarter budgets
@@ -53,7 +68,9 @@ class Bouch
     show_annual_total
     show_annual_income(@pouch['Salary'])
     show_budget_percentage(@pouch['Salary'])
-    show_assets_total(@pouch['Assets'])
+    show_assets_total
+    show_debts_total
+    show_debt_ratio
   end
 
   # Show the raw budget hash object parsed from the budget pouch YAML file
@@ -73,6 +90,18 @@ class Bouch
   # Calculate the percentage of budget of a salary/income
   def calc_budget_percentage(total, salary)
     ((total.to_f / salary.to_f) * 100).round(2)
+  end
+
+  # Calculate debt/liability aggregate amount
+  def calc_debts(debts)
+    debts.each do |_item, value|
+      @debts.push(value)
+    end
+  end
+
+  # Calculate a debt ratio: total debts divided by total assets
+  def calc_debt_ratio(debts, assets)
+    (debts.to_f / assets.to_f).round(2)
   end
 
   # Calculate a quarterly repeating budget item amount

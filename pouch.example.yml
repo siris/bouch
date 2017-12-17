@@ -30,4 +30,7 @@ Salary:
 Assets:
   foo: 500
   bar: 500
+Debts:
+  baz: 100
+  qax: 150
 ...
