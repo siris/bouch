@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative 'lib/bouch'
+require 'bouch'
 
 def create_budget
   budget = Bouch.new(ARGV[0])
