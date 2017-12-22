@@ -44,6 +44,9 @@ Style/BracesAroundHashParameters:
 Style/CommentAnnotation:
   Enabled: false
 
+Style/CommandLiteral:
+  EnforcedStyle: percent_x
+
 Style/EmptyLiteral:
   Enabled: false
 
