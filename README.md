@@ -1,18 +1,40 @@
 # Bouch
-The budget pouch. A simple tool to calculate and project your annual personal budget based on fiscal quarters expenditures, income, assets, and debts.
+The budget pouch. A simple tool to calculate and project your annual personal budget based on fiscal quarter expenditures, income, assets, and debts.
 
 Use it to help establish an annual financial plan, set monetary goals, and gain perspective on your financial health.
 
+## Install
+
+To install bouch you can choose one of these methods:
+
+* Clone this git repository
+* Clone this git repository and install bouch as a local RubyGem
+
+To clone this git repository execute this command in a terminal emulator's command-line interface:
+
+```
+git clone https://github.com/siris/bouch.git
+```
+
+To install bouch as a local RubyGem simply run these commands in a terminal emulator's CLI:
+
+```
+git clone https://github.com/siris/bouch.git
+cd bouch
+gem build bouch.gemspec
+gem install bouch-X.X.X.gem
+```
+
 ## Usage
 
-Bouch takes a simple YAML file as its primary input. This will be referred to as a budget pouch file.
+Bouch takes a simple YAML file as its primary data input. This will be referred to as a budget pouch file.
 
 There is an example budget pouch file called **pouch.example.yml**.
 
-Use this budget pouch file and execute the following command on your favorite terminal emulator command-line interface:
+Use this budget pouch file and execute the following command on your favorite terminal emulator's CLI:
 
 ```
-./bouch pouch.example.yml
+bouch pouch.example.yml
 ```
 
 You should see the example budget summary output:
@@ -29,11 +51,14 @@ Annual Salary:                 28808.00
 Budget Percent:                42%
 ---------------
 Assets Total:                  1000.00
+---------------
+Debt Total:                    250.00
+Debt Ratio:                    0.2500
 ```
 
 ### Pouch Schema
 
-To use bouch to calculate your own budget you must create a budget pouch file.
+To use bouch to calculate your own budget you must create a customized budget pouch file.
 
 Budget pouch files are written in Ruby friendly YAML and currently use the following schema:
 
