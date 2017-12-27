@@ -3,6 +3,7 @@ require 'yaml'
 # Calculate and create simple financial budgets
 # by parsing a single YAML file as input
 class Bouch
+  attr_accessor :assets, :debts, :pouch, :quarters
   def initialize(file)
     @assets = Array.new
     @debts = Array.new
@@ -71,11 +72,6 @@ class Bouch
     show_assets_total
     show_debts_total
     show_debt_ratio
-  end
-
-  # Show the raw budget hash object parsed from the budget pouch YAML file
-  def show_pouch
-    puts @pouch
   end
 
   private
