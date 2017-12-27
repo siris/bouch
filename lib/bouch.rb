@@ -78,7 +78,7 @@ class Bouch
 
   # Calculate asset value aggregate amount
   def calc_assets(assets)
-    assets.each do |_item, value|
+    assets.each_value do |_item, value|
       @assets.push(value)
     end
   end
@@ -90,7 +90,7 @@ class Bouch
 
   # Calculate debt/liability aggregate amount
   def calc_debts(debts)
-    debts.each do |_item, value|
+    debts.each_value do |_item, value|
       @debts.push(value)
     end
   end
@@ -112,9 +112,9 @@ class Bouch
 
   # Calculate each financial quarters budget items, including repeating ones
   def calc_quarters_raw(budget)
-    budget.each do |_q, items|
+    budget.each_value do |_q, items|
       @quarters[@quarters.length.to_s] = Array.new
-      items.each do |_item, value|
+      items.each_value do |_item, value|
         case value
         when Hash
           if value.key?('repeat')

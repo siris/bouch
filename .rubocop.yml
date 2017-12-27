@@ -65,6 +65,9 @@ Style/EmptyLiteral:
 Style/Encoding:
   Enabled: false
 
+Style/FormatStringToken:
+  EnforcedStyle: unannotated
+
 Style/GuardClause:
   Enabled: false
 
