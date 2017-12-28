@@ -1,5 +1,7 @@
 # Bouch
-The budget pouch. A simple tool to calculate and project your annual personal budget based on fiscal quarter expenditures, income, assets, and debts.
+[![Build Status](https://semaphoreci.com/api/v1/siris/bouch/branches/master/badge.svg)](https://semaphoreci.com/siris/bouch)
+
+`Bouch` is the budget pouch. A simple tool to calculate and project your annual personal budget based on fiscal quarter expenditures, income, assets, and debts.
 
 Use it to help establish an annual financial plan, set monetary goals, and gain perspective on your financial health.
 
