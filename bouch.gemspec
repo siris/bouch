@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'bouch'
-  s.version     = '1.0.1'
+  s.version     = '1.0.2'
   s.date        = '2017-12-22'
   s.summary     =
     'A simple tool to calculate and project your ' +

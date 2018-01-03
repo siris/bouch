@@ -42,20 +42,22 @@ bouch pouch.example.yml
 You should see the example budget summary output:
 
 ```
----------------
-Quarter1:                      3025.00
-Quarter2:                      3025.00
-Quarter3:                      3025.00
-Quarter4:                      3025.00
----------------
-Annual Total:                  12100.00
-Annual Salary:                 28808.00
-Budget Percent:                42%
----------------
+----------------------
+Quarter 1:                     3025.00
+Quarter 2:                     3025.00
+Quarter 3:                     3025.00
+Quarter 4:                     3025.00
+----------------------
+Budget Annual Total:           12100.00
+Budget Annual Income:          28808.00
+Budget Income Percent:         42.00%
+----------------------
 Assets Total:                  1000.00
----------------
+----------------------
 Debt Total:                    250.00
 Debt Ratio:                    0.2500
+Debt Ratio Percent:            25.00%
+----------------------
 ```
 
 ### Pouch Schema
