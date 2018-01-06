@@ -7,9 +7,8 @@ Use it to help establish an annual financial plan, set monetary goals, and gain 
 
 ## Install
 
-To install bouch you can choose one of these methods:
+To install bouch simply:
 
-* Clone this git repository
 * Clone this git repository and install bouch as a local RubyGem
 
 To clone this git repository execute this command in a terminal emulator's command-line interface:
@@ -21,7 +20,6 @@ git clone https://github.com/siris/bouch.git
 To install bouch as a local RubyGem simply run these commands in a terminal emulator's CLI:
 
 ```
-git clone https://github.com/siris/bouch.git
 cd bouch
 gem build bouch.gemspec
 gem install bouch-X.X.X.gem
@@ -54,9 +52,9 @@ Budget Income Percent:         42.00%
 ----------------------
 Assets Total:                  1000.00
 ----------------------
-Debt Total:                    250.00
-Debt Ratio:                    0.2500
-Debt Ratio Percent:            25.00%
+Debt Total:                    420.00
+Debt Ratio:                    0.4200
+Debt Ratio Percent:            42.00%
 ----------------------
 ```
 

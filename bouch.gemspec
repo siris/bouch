@@ -1,7 +1,8 @@
+require File.expand_path('../lib/bouch/version', __FILE__)
+
 Gem::Specification.new do |s|
   s.name        = 'bouch'
-  s.version     = '1.0.2'
-  s.date        = '2017-12-22'
+  s.version     = Bouch::VERSION
   s.summary     =
     'A simple tool to calculate and project your ' +
     'annual personal budget based on fiscal quarters ' +

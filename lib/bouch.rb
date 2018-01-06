@@ -4,6 +4,7 @@ require 'yaml'
 # by parsing a single YAML file as input
 class Bouch
   attr_accessor :assets, :debts, :pouch, :quarters
+
   def initialize(file)
     @assets = Array.new
     @debts = Array.new
