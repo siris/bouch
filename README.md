@@ -65,6 +65,7 @@ To use bouch to calculate your own budget you must create a customized budget po
 Budget pouch files are written in Ruby friendly YAML and currently use the following schema:
 
 * Deeply nested mappings, also know as hashes
+* Think of hashes as simple groupings of keys and values
 * Primary hash keys:
   * **Budget**
   * **Salary**
@@ -103,6 +104,7 @@ Budget pouch files are written in Ruby friendly YAML and currently use the follo
   * bar
       * Value: Integer or Float
       * Equals a debt's total valued amount
+* All non-primary nested keys are case insensitive
 
 Here is an simple example of of budget pouch file:
 
@@ -140,7 +142,7 @@ Assets:
   foo: 500
   bar: 500
 Debts:
-  baz: 100
-  qax: 150
+  baz: 120
+  qax: 300
 ...
 ```
