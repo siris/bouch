@@ -1,3 +1,3 @@
-module Bouch
+class Bouch
   VERSION = '1.0.5'.freeze
 end
