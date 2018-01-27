@@ -53,27 +53,29 @@ class Bouch
   end
 
   # Summarize and show the aggregate annual budget as a percentage of income
-  def show_budget_percentage(income)
+  def show_budget_percentage
     puts format('%-30s %.2f%s',
                 'Budget Income Percent:',
                 calc_budget_percentage(
                   calc_quarters_raw_total,
-                  calc_salary(income['quantity'], income['frequency'])
+                  calc_salary(@pouch['Salary']['quantity'], @pouch['Salary']['frequency'])
                 ),
                 '%')
   end
 
   # Summarize and show annual income
-  def show_annual_income(income)
-    puts format('%-30s %.2f', 'Budget Annual Income:', calc_salary(income['quantity'], income['frequency']))
+  def show_annual_income
+    puts format('%-30s %.2f',
+                'Budget Annual Income:',
+                calc_salary(@pouch['Salary']['quantity'], @pouch['Salary']['frequency']))
   end
 
   # Summarize and show all aggregate components of the quarterly, annual budgets, assets
   def show_budget
     show_quarters
     show_annual_total
-    show_annual_income(@pouch['Salary'])
-    show_budget_percentage(@pouch['Salary'])
+    show_annual_income
+    show_budget_percentage
     show_assets_total
     show_debts_total
     show_debt_ratio
