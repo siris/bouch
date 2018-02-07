@@ -1,26 +1,30 @@
 require 'bouch'
+require 'bouch/version'
 
 class Bouch
   # Parse the command line
   class CLI
-    YAML_FILE = ARGV[0].freeze
+    attr_accessor :yaml_file
+
+    def initialize(file)
+      @yaml_file = file
+    end
 
     def start
-      if YAML_FILE.eql?(nil)
+      if @yaml_file.eql?(nil)
         puts 'Please supply budget pouch YAML file path and rerun bouch.'
         usage
-      elsif File.exists?(YAML_FILE)
-        budget = Bouch.new(YAML_FILE)
+      elsif File.exist?(@yaml_file)
+        budget = Bouch.new(@yaml_file)
         budget.show_budget
       else
-        puts "Whoops. The budget pouch file specified: #{YAML_FILE} ; does not exist!"
+        puts "Whoops. The budget pouch file specified: #{@yaml_file} ; does not exist!"
         usage
-        exit 1
       end
     end
 
     def usage
-      puts "Usage: #{File.basename($PROGRAM_NAME)} [YAML_FILE]"
+      puts "<<bouch #{Bouch::VERSION}>>\nUsage: #{File.basename($PROGRAM_NAME)} [YAML_FILE]"
     end
   end
 end

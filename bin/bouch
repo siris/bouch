@@ -2,4 +2,4 @@
 
 require 'bouch/cli'
 
-Bouch::CLI.new.start
+Bouch::CLI.new(ARGV[0].freeze).start

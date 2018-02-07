@@ -3,7 +3,7 @@ require 'bouch/version'
 
 Gem::Specification.new do |s|
   s.name        = 'bouch'.freeze
-  s.date        = '2018-01-27'
+  s.date        = '2018-02-07'
   s.version     = Bouch::VERSION
   s.summary     =
     'A simple tool to calculate and project your ' +
