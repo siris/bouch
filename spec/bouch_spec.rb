@@ -7,13 +7,13 @@ describe Bouch do
   end
 
   describe '#assets' do
-    it 'returns an empty array of assets' do
+    it 'returns an empty Array of assets' do
       expect(@bouch.assets).to be_empty
     end
   end
 
   describe '#debts' do
-    it 'returns an emptry array of debts' do
+    it 'returns an empty Array of debts' do
       expect(@bouch.debts).to be_empty
     end
   end
@@ -25,7 +25,7 @@ describe Bouch do
   end
 
   describe '#quarters' do
-    it 'returns an empty hash of fiscal quarters' do
+    it 'returns an empty Hash of fiscal quarters' do
       expect(@bouch.quarters).to be_empty
     end
   end

@@ -9,7 +9,7 @@ describe BouchCalculate do
   end
 
   describe '.calc_assets' do
-    it 'pushes asset values to an array and returns a hash' do
+    it 'pushes asset values to an Array and returns a Hash' do
       expect(@bouch.calc_assets(@bouch.pouch['Assets'])).to be_a_kind_of(Hash)
     end
     it 'creates array of assets greater than zero' do
@@ -28,7 +28,7 @@ describe BouchCalculate do
   end
 
   describe '.calc_debts' do
-    it 'pushes debt values to an array and returns a hash' do
+    it 'pushes debt values to an Array and returns a Hash' do
       expect(@bouch.calc_debts(@bouch.pouch['Debts'])).to be_a_kind_of(Hash)
     end
     it 'creates an array of debts greater than zero' do
@@ -40,7 +40,7 @@ describe BouchCalculate do
 
   describe '.calc_debt_ratio' do
     context 'given a sum of debts and assets' do
-      it 'returns a float number' do
+      it 'returns a Float number' do
         expect(@bouch.calc_debt_ratio(420.00, 1000.00)).to be_a_kind_of(Float)
       end
       it 'returns a debt ratio' do
@@ -51,7 +51,7 @@ describe BouchCalculate do
 
   describe '.calc_debt_ratio_percent' do
     context 'given a debt ratio' do
-      it 'returns a float number' do
+      it 'returns a Float number' do
         debt_ratio = @bouch.calc_debt_ratio(420.00, 1000.00)
         # Uncomment line below for Debug
         # puts debt_ratio
@@ -68,7 +68,7 @@ describe BouchCalculate do
 
   describe '.calc_repeating' do
     context 'given a numerical cost amount' do
-      it 'returns a float number' do
+      it 'returns a Float number' do
         expect(@bouch.calc_repeating(1000)).to be_a_kind_of(Float)
       end
       it 'returns a number three times that amount' do
@@ -79,7 +79,7 @@ describe BouchCalculate do
 
   describe '.calc_salary' do
     context 'given a salary amount and weekly frequency' do
-      it 'returns a float number' do
+      it 'returns a Float number' do
         expect(@bouch.calc_salary(1108.00, 2)).to be_a_kind_of(Float)
       end
       it 'returns an annual income total' do
@@ -90,7 +90,7 @@ describe BouchCalculate do
 
   describe '.calc_quarters_raw' do
     context 'given a quarterly budget' do
-      it 'pushes quarterly budget items to a collection of arrays and returns a hash' do
+      it 'pushes quarterly budget items to a collection of Arrays and returns a Hash' do
         expect(@bouch.calc_quarters_raw(@bouch.pouch['Budget'])).to be_a_kind_of(Hash)
       end
       it 'creates an array of financial quarter one budget items greater than zero' do
@@ -118,7 +118,7 @@ describe BouchCalculate do
 
   describe '.calc_quarters_raw_total' do
     context 'given arrays of quarterly budget items' do
-      it 'returns a float number' do
+      it 'returns a Float number' do
         expect(@bouch.calc_quarters_raw_total).to be_a_kind_of(Float)
       end
 
