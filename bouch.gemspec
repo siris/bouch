@@ -1,9 +1,9 @@
-$LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift File.expand_path('lib', __dir__)
 require 'bouch/version'
 
 Gem::Specification.new do |s|
   s.name        = 'bouch'.freeze
-  s.date        = '2018-02-07'
+  s.date        = '2018-03-17'
   s.version     = Bouch::VERSION
   s.summary     =
     'A simple tool to calculate and project your ' +
