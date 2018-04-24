@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 # Financial budget calculation and operations for Bouch
 module BouchCalculate

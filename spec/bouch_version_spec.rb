@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'bouch/version'
 
 describe 'Bouch::Version' do

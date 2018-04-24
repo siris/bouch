@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'bouch/cli'
 
 describe 'Bouch::CLI' do
