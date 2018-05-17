@@ -8,6 +8,10 @@ describe Bouch do
     @bouch = Bouch.new(@yaml)
   end
 
+  it 'is a Bouch object' do
+    expect(@bouch).to be_kind_of(Bouch)
+  end
+
   describe '#assets' do
     it 'returns an empty Array of assets' do
       expect(@bouch.assets).to be_empty

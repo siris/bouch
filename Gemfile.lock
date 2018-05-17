@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bouch (1.0.6)
+    bouch (1.0.8)
 
 GEM
   remote: https://rubygems.org/
@@ -27,7 +27,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
-    rubocop (0.55.0)
+    rubocop (0.56.0)
       parallel (~> 1.10)
       parser (>= 2.5)
       powerpack (~> 0.1)

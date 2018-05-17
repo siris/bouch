@@ -7,6 +7,10 @@ describe 'Bouch::CLI' do
     @cli = Bouch::CLI.new('pouch.example.yml')
   end
 
+  it 'is a Bouch::CLI object' do
+    expect(@cli).to be_kind_of(Bouch::CLI)
+  end
+
   describe '#yaml_file' do
     it 'returns a name of a file that is a String' do
       expect(@cli.yaml_file).to be_kind_of(String)
