@@ -1,5 +1,5 @@
 # Bouch
-[![Build Status](https://semaphoreci.com/api/v1/siris/bouch/branches/master/badge.svg)](https://semaphoreci.com/siris/bouch)
+[![GitLab Migration](https://img.shields.io/badge/GitLab%20Migration-Completed-brightgreen.svg)](https://gitlab.com/ssofos/bouch)
 
 `Bouch` is the budget pouch. A simple tool to calculate and project your annual personal budget based on fiscal quarter expenditures, income, assets, and debts.
 
